@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CatatLari</string>
+    <string name="title_share">Mari Bagikan\nPengalamanmu!</string>
+    <string name="hint_tanggal">Tanggal</string>
+    <string name="hint_jarak">Jarak Lari</string>
+    <string name="hint_durasi">Durasi</string>
+    <string name="btn_save">Simpan</string>
+    <string name="create_account">Buat Akun</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
