@@ -36,7 +36,20 @@ class HalamanBeranda : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_halaman_beranda, container, false)
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        // 1. Hubungkan TextView Greeting
+        val tvGreeting = view.findViewById<android.widget.TextView>(R.id.tvGreeting)
+
+        // 2. Tangkap email dari Intent (karena dikirim dari HalamanLogin via MainActivity)
+        val emailUser = requireActivity().intent.getStringExtra("EXTRA_EMAIL")
+
+        // 3. Set teksnya
+        if (emailUser != null) {
+            tvGreeting.text = "Halo, $emailUser!"
+        }
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of

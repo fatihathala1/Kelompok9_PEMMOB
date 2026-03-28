@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_auth"
+    app:startDestination="@id/halamanWelcome">
+
+    <fragment
+        android:id="@+id/halamanWelcome"
+        android:name="com.example.kelompok9_catatlari.HalamanWelcome"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_halaman_welcome">
+
+        <action
+            android:id="@+id/action_welcome_to_login"
+            app:destination="@id/halamanLogin" />
+
+        <action
+            android:id="@+id/action_welcome_to_register"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/halamanLogin"
+        android:name="com.example.kelompok9_catatlari.fragment_halaman_login"
+        android:label="Login"
+        tools:layout="@layout/fragment_halaman_login" />
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.kelompok9_catatlari.fragment_register"
+        android:label="Register"
+        tools:layout="@layout/fragment_register" />
+
+</navigation>

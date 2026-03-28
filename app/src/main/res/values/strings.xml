@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">CatatLari</string>
-    <string name="title_share">Let's Share\nyour journey on Cadence!</string>
+    <string name="title_share">Let\'s Share\nyour journey on Cadence!</string>
     <string name="hint_tanggal">tanggal</string>
     <string name="hint_jarak">jarak lari</string>
     <string name="hint_durasi">durasi</string>

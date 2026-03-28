@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
+import androidx.navigation.fragment.findNavController
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -36,6 +36,26 @@ class HalamanWelcome : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_halaman_welcome, container, false)
     }
+
+    // ===============================================================
+    // KODE TAMBAHAN UNTUK TOMBOL NAVIGASI DIMASUKKAN DI SINI
+    // ===============================================================
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val btnLogin = view.findViewById<android.widget.Button>(R.id.btnLogin)
+        val btnRegister = view.findViewById<android.widget.Button>(R.id.btnRegister)
+
+        // Langsung panggil findNavController() tanpa awalan panjang
+        btnLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_welcome_to_login)
+        }
+
+        btnRegister.setOnClickListener {
+            findNavController().navigate(R.id.action_welcome_to_register)
+        }
+    }
+    // ===============================================================
 
     companion object {
         /**

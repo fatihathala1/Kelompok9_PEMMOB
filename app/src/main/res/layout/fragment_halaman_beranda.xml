@@ -9,17 +9,14 @@
     <!-- Container Full Height -->
     <LinearLayout
         android:id="@+id/layoutBeranda"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="24dp"
         android:orientation="vertical"
         android:padding="24dp"
-        android:paddingBottom="96dp"
         android:elevation="8dp"
-        android:clipToOutline="true"
-        android:outlineProvider="background"
+        android:background="@android:color/white"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
