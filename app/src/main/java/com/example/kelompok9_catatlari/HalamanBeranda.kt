@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -48,6 +49,15 @@ class HalamanBeranda : Fragment() {
         // 3. Set teksnya
         if (emailUser != null) {
             tvGreeting.text = "Halo, $emailUser!"
+        }
+        // 1. Cari tombol FAB-nya (Sesuai ID di XML-mu)
+        val fabTambah = view.findViewById<com.google.android.material.floatingactionbutton.FloatingActionButton>(R.id.fabTambah)
+
+        // 2. Beri perintah klik
+        fabTambah.setOnClickListener {
+            // Gunakan NavHostFragment untuk mencari controllernya secara spesifik untuk Fragment ini
+            androidx.navigation.fragment.NavHostFragment.findNavController(this@HalamanBeranda)
+                .navigate(R.id.action_beranda_to_formLari)
         }
     }
     companion object {

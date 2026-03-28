@@ -3,16 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_main"
-    app:startDestination="@id/homeFragment"> <fragment
-    android:id="@+id/homeFragment"
-    android:name="com.example.kelompok9_catatlari.HalamanBeranda"
-    android:label="Beranda"
-    tools:layout="@layout/fragment_halaman_beranda" />
+    app:startDestination="@id/halamanBeranda">
 
     <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.example.kelompok9_catatlari.ProfileFragment"
-        android:label="Profil"
-        tools:layout="@layout/fragment_profile" />
+        android:id="@+id/halamanBeranda"
+        android:name="com.example.kelompok9_catatlari.HalamanBeranda"
+        tools:layout="@layout/fragment_halaman_beranda">
+
+        <action
+            android:id="@+id/action_beranda_to_formLari"
+            app:destination="@id/halamanFormLari" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/halamanFormLari"
+        android:name="com.example.kelompok9_catatlari.HalamanFormLari"
+        tools:layout="@layout/fragment_form_lari" />
 
 </navigation>
