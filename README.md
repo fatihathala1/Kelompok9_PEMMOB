@@ -8,6 +8,7 @@ WEEK 3
    Membuat halaman register dan login
 4. 24082010172 Masyito Indi Kartika:
    Membuat halaman tambah lari
+   
 Tugas Hari Raya 
 1. 24082010141 Fatih Athala R:
    Menambahkan icon aplikasi
