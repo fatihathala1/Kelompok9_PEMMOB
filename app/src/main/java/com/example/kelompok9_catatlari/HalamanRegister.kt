@@ -60,6 +60,7 @@ class fragment_register : Fragment() {
             val bundle = Bundle()
             bundle.putString("EMAIL_DAFTAR", userBaru.email)
 
+        
             findNavController().navigate(R.id.halamanLogin, bundle)
         }
 
